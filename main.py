@@ -22,10 +22,12 @@ def main():
             if event.type == pygame.QUIT:
                 return
 
-        pygame.display.flip()
-        p1.draw(screen)
-
         dt = clock.tick(60)/1000
+
+        screen.fill((0,0,0))
+        p1.update(dt)
+        p1.draw(screen)
+        pygame.display.flip()
 
 
 if __name__ == "__main__":
